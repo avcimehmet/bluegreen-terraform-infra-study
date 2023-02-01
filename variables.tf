@@ -1,12 +1,12 @@
 variable "aws_region" {
   description = "Region in which AWS resources to be created"
   type        = string
-  default     = "eu-east-1"
+  default     = "us-east-1"
 }
 
 variable "profile" {
-  description = "AWS Credentials Profile configured on the local desktop terminal  $HOME/.aws/credentials"
-  default     = "default" #"mehmets-deployment"
+  description = "AWS Credentials Profile configured on your local desktop terminal  $HOME/.aws/credentials"
+  default     = "default"
 }
 
 variable "infrastructure_version" {
