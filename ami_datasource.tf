@@ -1,7 +1,8 @@
 # Get latest AMI ID for Amazon Linux2 OS
 data "aws_ami" "amzlinux" {
-  most_recent = true
+  most_recent = true # most_recent - (Optional) If more than one result is returned, use the most recent AMI.
   owners      = ["amazon"]
+
   filter {
     name   = "name"
     values = ["amzn2-ami-hvm-*-gp2"]
