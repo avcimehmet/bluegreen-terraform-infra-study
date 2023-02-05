@@ -5,7 +5,7 @@ resource "aws_instance" "Blue-green-deployment-green" {
   subnet_id              = element(local.subnets, count.index)
   vpc_security_group_ids = [aws_security_group.Blue-green-deployment.id]
 
-   user_data = templatefile("./userdata-apache.sh", {
+  user_data = templatefile("./userdata-apache.sh", {
     file_content = "green version 1.1 - ${count.index}"
   })
 
